@@ -1,6 +1,6 @@
 package br.edu.cesarschool.cc.poo.ac.cliente;
 
-public class Cliente {
+public class Cliente{
     private String cpf;
     private String nome;
     private double saldoPontos;
