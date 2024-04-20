@@ -3,19 +3,19 @@ import br.edu.cesarschool.cc.poo.ac.utils.Registro;
 
 public class Voo extends Registro {
     private String aeroportoOrigem;
-    private String aeroDestino;
+    private String aeroportoDestino;
     private String companhiaAerea;
     private int numeroVoo;
 
-    public Voo(String aeroDestino, String aeroportoOrigem, String companhiaAerea, int numeroVoo) {
-        this.aeroDestino = aeroDestino;
+    public Voo(String aeroportoDestino, String aeroportoOrigem, String companhiaAerea, int numeroVoo) {
+        this.aeroportoDestino = aeroportoDestino;
         this.aeroportoOrigem = aeroportoOrigem;
         this.companhiaAerea = companhiaAerea;
         this.numeroVoo = numeroVoo;
     }
 
-    public String getAeroDestino() {
-        return aeroDestino;
+    public String getAeroportoDestino() {
+        return aeroportoDestino;
     }
 
     public String getAeroportoOrigem() {
