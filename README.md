@@ -41,10 +41,6 @@ Cada classe está documentada com instruções sobre como as entidades são cria
 
 Contribuições para o projeto são bem-vindas. Antes de enviar sua contribuição, por favor, revise as diretrizes de contribuição.
 
-## Licença
-
-Este projeto é distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
 ## Contato
 
 Para mais informações, entre em contato com o administrador do repositório.
