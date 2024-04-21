@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
 public class Bilhete extends Registro {
     private Cliente cliente;
     private Voo voo;
-    private double preco;
     private double pagamentoEmPontos;
+    private double preco;
     private java.time.LocalDateTime dataHora;
 
-    public Bilhete(Cliente cliente, Voo voo, double preco, double pagamentoEmPontos, LocalDateTime dataHora) {
+    public Bilhete(Cliente cliente, Voo voo, double pagamentoEmPontos, double preco, LocalDateTime dataHora) {
         this.cliente = cliente;
         this.voo = voo;
         this.preco = preco;
@@ -41,7 +41,7 @@ public class Bilhete extends Registro {
     }
 
     public double obterValorPago(){
-        return this.preco - this.getPagamentoEmPontos();
+        return this.getPagamentoEmPontos() - this.preco;
     }
     public double obterValorPontuacao(){
         return this.obterValorPago() / 20;
