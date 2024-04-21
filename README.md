@@ -41,7 +41,12 @@ Cada classe está documentada com instruções sobre como as entidades são cria
 
 Contribuições para o projeto são bem-vindas. Antes de enviar sua contribuição, por favor, revise as diretrizes de contribuição.
 
+## Testes
+
+O sistema inclui testes automatizados usando JUnit para garantir a corretude e eficácia das funcionalidades implementadas. Os testes cobrem desde a validação de dados de entrada até a lógica de negócios das operações principais.
+
+![tests](https://github.com/gabrielgrm/AirlineManagementSystem-POO/assets/131777675/6f56e5ca-b02b-4d8f-83b1-3c9a238ec160)
+
 ## Contato
 
 Para mais informações, entre em contato com o administrador do repositório.
-
