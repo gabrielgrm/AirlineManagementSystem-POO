@@ -53,6 +53,55 @@ public class BilheteMediator {
         return null;
     }
 
+    public ResultadoGeracaoBilhete gerarBilhete(String cpf, String ciaAerea, int numeroVoo, double preco, double pagamentoEmPontos, LocalDateTime dataHora){
+
+        String erroValidacao = validar(cpf, ciaAerea, numeroVoo, preco, pagamentoEmPontos, dataHora);
+        if (erroValidacao != null) {
+            return new ResultadoGeracaoBilhete(null, null, erroValidacao);
+        }
+
+
+        Voo voo = new Voo(null, null, ciaAerea, numeroVoo);
+        String vooId = voo.obterIdVoo();
+        Voo vooEncontrado = vooMediator.buscar(vooId);
+
+        if (vooEncontrado == null) {
+            return new ResultadoGeracaoBilhete(null, null, "Voo nao encontrado");
+        }
+
+        Cliente cliente = clienteMediator.buscar(cpf);
+        if (cliente == null) {
+            return new ResultadoGeracaoBilhete(null, null, "Cliente nao encontrado");
+        }
+
+        double pontosNecessarios = pagamentoEmPontos * 20;
+        if (cliente.getSaldoPontos() < pontosNecessarios) {
+            return new ResultadoGeracaoBilhete(null, null, "Pontos insuficientes");
+        }
+
+
+        Bilhete bilhete = new Bilhete();
+
+
+        cliente.debitarPontos(pontosNecessarios);
+        cliente.creditarPontos(bilhete.obterValorPontuacao());
+
+        boolean included = bilheteDAO.incluir(bilhete);
+        if (!included) {
+            return new ResultadoGeracaoBilhete(null, null, "Bilhete ja existente");
+        }
+
+
+        String erroAlteracao = clienteMediator.alterar(cliente);
+        if (erroAlteracao != null) {
+            return new ResultadoGeracaoBilhete(null, null, erroAlteracao);
+        }
+
+        return new ResultadoGeracaoBilhete(bilhete,null, null);
+
+    }
+
+
     public ResultadoGeracaoBilhete gerarBilheteVip(String cpf, String ciaAerea, int numeroVoo, double preco, double pagamentoEmPontos, LocalDateTime dataHora, double bonusPontuacao) {
 
         String erroValidacao = validar(cpf, ciaAerea, numeroVoo, preco, pagamentoEmPontos, dataHora);
