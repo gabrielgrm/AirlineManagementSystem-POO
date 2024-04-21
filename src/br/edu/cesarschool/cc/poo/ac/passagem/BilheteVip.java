@@ -6,12 +6,10 @@ import java.time.LocalDateTime;
 
 public class BilheteVip extends Bilhete {
     private double bonusPontuacao;
-
     public BilheteVip(Cliente cliente, Voo voo, double preco, double pagamentoEmPontos, LocalDateTime dataHora, double bonusPontuacao) {
-        super(cliente, voo, pagamentoEmPontos, preco, dataHora);
+        super(cliente, voo, preco, pagamentoEmPontos ,dataHora);
         this.bonusPontuacao = bonusPontuacao;
     }
-
     public double getBonusPontuacao() {
         return bonusPontuacao;
     }
