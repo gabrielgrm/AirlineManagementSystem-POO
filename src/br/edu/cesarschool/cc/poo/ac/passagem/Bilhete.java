@@ -10,12 +10,12 @@ public class Bilhete extends Registro {
     private double pagamentoEmPontos;
     private java.time.LocalDateTime dataHora;
 
-    public Bilhete() {
-        this.cliente = this.cliente;
-        this.dataHora = this.dataHora;
-        this.pagamentoEmPontos = this.pagamentoEmPontos;
-        this.preco = this.preco;
+    public Bilhete(Cliente cliente, Voo voo, double preco, double pagamentoEmPontos, LocalDateTime dataHora) {
+        this.cliente = cliente;
         this.voo = voo;
+        this.preco = preco;
+        this.pagamentoEmPontos = pagamentoEmPontos;
+        this.dataHora = dataHora;
     }
 
     public Cliente getCliente() {

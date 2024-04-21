@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 public class BilheteVip extends Bilhete {
     private double bonusPontuacao;
 
-    public BilheteVip(Cliente cliente, LocalDateTime dataHora, double bonusPontuacao, double preco, Voo foundVoo, double pontuacao) {
-        super();
+    public BilheteVip(Cliente cliente, Voo voo, double preco, double pagamentoEmPontos, LocalDateTime dataHora, double bonusPontuacao) {
+        super(cliente, voo, pagamentoEmPontos, preco, dataHora);
         this.bonusPontuacao = bonusPontuacao;
     }
 
@@ -21,6 +21,6 @@ public class BilheteVip extends Bilhete {
     }
 
     public double obterValorPontuacaoVip() {
-        return obterValorPontuacao() * (1+ getBonusPontuacao()/100);
+        return obterValorPontuacao() * ((getBonusPontuacao()/100) + 1);
     }
 }

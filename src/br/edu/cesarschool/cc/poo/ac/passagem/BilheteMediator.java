@@ -80,7 +80,7 @@ public class BilheteMediator {
         }
 
 
-        Bilhete bilhete = new Bilhete();
+        Bilhete bilhete = new Bilhete(cliente, vooEncontrado, pagamentoEmPontos, preco, dataHora);
 
 
         cliente.debitarPontos(pontosNecessarios);
@@ -133,7 +133,7 @@ public class BilheteMediator {
         }
 
 
-        BilheteVip bilheteVip = new BilheteVip(cliente, dataHora, pagamentoEmPontos, preco, vooEncontrado, bonusPontuacao);
+        BilheteVip bilheteVip = new BilheteVip(cliente, vooEncontrado, pagamentoEmPontos, preco, dataHora, bonusPontuacao);
 
 
         cliente.debitarPontos(pontosNecessarios);

@@ -1,6 +1,6 @@
 package br.edu.cesarschool.cc.poo.ac.cliente;
-
-public class Cliente{
+import java.io.Serializable;
+public class Cliente implements Serializable {
     private String cpf;
     private String nome;
     private double saldoPontos;

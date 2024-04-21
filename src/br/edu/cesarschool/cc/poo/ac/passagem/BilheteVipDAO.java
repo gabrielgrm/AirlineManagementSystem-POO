@@ -7,7 +7,7 @@ public class BilheteVipDAO {
     private CadastroObjetos cadastro = new CadastroObjetos(BilheteVip.class);
 
     private String obterIdUnico(BilheteVip bilheteVip) {
-        return bilheteVip.gerarNumero(); // Assuming BilheteVip class has a gerarNumero method similar to Bilhete
+        return bilheteVip.gerarNumero();
     }
 
     public BilheteVip buscar(String numeroBilhete) {
