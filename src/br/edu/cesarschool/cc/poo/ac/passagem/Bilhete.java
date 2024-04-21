@@ -41,7 +41,9 @@ public class Bilhete extends Registro {
     }
 
     public double obterValorPago(){
-        return this.getPagamentoEmPontos() - this.preco;
+        if (this.getPagamentoEmPontos() - this.preco > 0) {
+            return this.getPagamentoEmPontos() - this.preco;
+        } else return this.preco - this.getPagamentoEmPontos();
     }
     public double obterValorPontuacao(){
         return this.obterValorPago() / 20;

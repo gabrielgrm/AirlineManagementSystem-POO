@@ -7,7 +7,7 @@ public class Voo extends Registro {
     private String companhiaAerea;
     private int numeroVoo;
 
-    public Voo(String aeroportoDestino, String aeroportoOrigem, String companhiaAerea, int numeroVoo) {
+    public Voo(String aeroportoOrigem, String aeroportoDestino, String companhiaAerea, int numeroVoo) {
         this.aeroportoDestino = aeroportoDestino;
         this.aeroportoOrigem = aeroportoOrigem;
         this.companhiaAerea = companhiaAerea;

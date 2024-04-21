@@ -16,20 +16,20 @@ public class Cliente implements Serializable {
     }
 
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public double getSaldoPontos() {
-        return saldoPontos;
+        return this.saldoPontos;
     }
     public void creditarPontos(double valor) {
-        saldoPontos += valor;
+        this.saldoPontos += valor;
     }
     public void debitarPontos(double valor) {
-        saldoPontos -= valor;
+        this.saldoPontos -= valor;
     }
 }

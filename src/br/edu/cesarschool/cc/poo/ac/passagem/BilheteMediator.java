@@ -83,8 +83,8 @@ public class BilheteMediator {
         Bilhete bilhete = new Bilhete(cliente, vooEncontrado, pagamentoEmPontos, preco, dataHora);
 
 
-        cliente.debitarPontos(pontosNecessarios);
         cliente.creditarPontos(bilhete.obterValorPontuacao());
+        cliente.debitarPontos(pontosNecessarios);
 
         boolean included = bilheteDAO.incluir(bilhete);
         if (!included) {
@@ -135,13 +135,12 @@ public class BilheteMediator {
 
         BilheteVip bilheteVip = new BilheteVip(cliente, vooEncontrado, pagamentoEmPontos, preco, dataHora, bonusPontuacao);
 
-
         cliente.debitarPontos(pontosNecessarios);
-        cliente.creditarPontos(bilheteVip.obterValorPontuacao());
+        cliente.creditarPontos(bilheteVip.obterValorPontuacaoVip());
 
         boolean included = bilheteVipDAO.incluir(bilheteVip);
         if (!included) {
-            return new ResultadoGeracaoBilhete(null, null, "Bilhete vip ja existente");
+            return new ResultadoGeracaoBilhete(null, null, "Bilhete ja existente");
         }
 
 
