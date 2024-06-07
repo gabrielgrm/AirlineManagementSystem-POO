@@ -3,9 +3,6 @@ package br.edu.cesarschool.cc.poo.ac.testes;
 import java.lang.reflect.Constructor;
 import java.time.LocalDateTime;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
 import br.edu.cesarschool.cc.poo.ac.cliente.Cliente;
 import br.edu.cesarschool.cc.poo.ac.cliente.ClienteMediator;
 import br.edu.cesarschool.cc.poo.ac.passagem.Bilhete;
@@ -13,6 +10,8 @@ import br.edu.cesarschool.cc.poo.ac.passagem.BilheteMediator;
 import br.edu.cesarschool.cc.poo.ac.passagem.BilheteVip;
 import br.edu.cesarschool.cc.poo.ac.passagem.Voo;
 import br.edu.cesarschool.cc.poo.ac.passagem.VooMediator;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestesAc01 {
     private static final Cliente CLI1 = new Cliente("69025183514", "MARIO", 100);

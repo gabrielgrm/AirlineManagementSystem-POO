@@ -140,7 +140,7 @@ public class BilheteMediator {
 
         boolean included = bilheteVipDAO.incluir(bilheteVip);
         if (!included) {
-            return new ResultadoGeracaoBilhete(null, null, "Bilhete ja existente");
+            return new ResultadoGeracaoBilhete(null, null, "Bilhete vip ja existente");
         }
 
 

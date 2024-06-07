@@ -2,8 +2,6 @@ package br.edu.cesarschool.cc.poo.ac.testes;
 
 import java.time.LocalDateTime;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import br.edu.cesarschool.cc.poo.ac.cliente.Cliente;
 import br.edu.cesarschool.cc.poo.ac.passagem.Bilhete;
@@ -12,6 +10,8 @@ import br.edu.cesarschool.cc.poo.ac.passagem.BilheteVip;
 import br.edu.cesarschool.cc.poo.ac.passagem.ResultadoGeracaoBilhete;
 import br.edu.cesarschool.cc.poo.ac.passagem.Voo;
 import br.edu.cesarschool.next.oo.persistenciaobjetos.CadastroObjetos;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestesAc04 extends TesteGeral {
     private static final String BILHETE_JA_EXISTENTE = "Bilhete ja existente";

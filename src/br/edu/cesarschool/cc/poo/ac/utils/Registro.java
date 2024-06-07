@@ -18,4 +18,7 @@ public class Registro implements Serializable {
     public LocalDateTime getDhInclusao() {
         return dhInclusao;
     }
+    public String getIdUnico() {
+        return "";
+    }
 }

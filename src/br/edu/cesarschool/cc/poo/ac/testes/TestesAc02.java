@@ -1,13 +1,11 @@
 package br.edu.cesarschool.cc.poo.ac.testes;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import br.edu.cesarschool.cc.poo.ac.cliente.Cliente;
 import br.edu.cesarschool.cc.poo.ac.cliente.ClienteMediator;
 import br.edu.cesarschool.next.oo.persistenciaobjetos.CadastroObjetos;
-
-import java.io.Serializable;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestesAc02 extends TesteGeral {
     private static final String CLIENTE_INEXISTENTE = "Cliente inexistente";
@@ -62,7 +60,7 @@ public class TestesAc02 extends TesteGeral {
         Assertions.assertEquals(1, qtdArqs);
         Cliente cliOri = (Cliente)cadastroCli.buscar(cli.getCpf());
         Assertions.assertNotNull(cliOri);
-        Assertions.assertTrue(ComparadoraObjetosSerial.compareObjectsSerial((Serializable) cli, (Serializable) cliOri));
+        Assertions.assertTrue(ComparadoraObjetosSerial.compareObjectsSerial(cli, cliOri));
     }
     @Test
     public void testCadCliente5() {
@@ -75,7 +73,7 @@ public class TestesAc02 extends TesteGeral {
         Assertions.assertEquals(2, qtdArqs);
         Cliente cliOri = (Cliente)cadastroCli.buscar(cliOutro.getCpf());
         Assertions.assertNotNull(cliOri);
-        Assertions.assertTrue(ComparadoraObjetosSerial.compareObjectsSerial((Serializable) cliOutro, (Serializable) cliOri));
+        Assertions.assertTrue(ComparadoraObjetosSerial.compareObjectsSerial(cliOutro, cliOri));
     }
     @Test
     public void testCadCliente6() {
