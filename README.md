@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Companhia Aérea - POO
 
-Este repositório contém as classes Java desenvolvidas para o projeto de atividade continuada da disciplina de Programação Orientada a Objetos (POO). O sistema é projetado para administrar operações de uma companhia aérea, incluindo cadastro de clientes, gestão de voos, emissão e gerenciamento de bilhetes aéreos, tanto regulares quanto VIPs.
+Este repositório contém as classes Java desenvolvidas para o projeto com Programação Orientada a Objetos (POO). O sistema é projetado para administrar operações de uma companhia aérea, incluindo cadastro de clientes, gestão de voos, emissão e gerenciamento de bilhetes aéreos, tanto regulares quanto VIPs.
 
 ## Estrutura do Projeto
 
@@ -46,7 +46,3 @@ Contribuições para o projeto são bem-vindas. Antes de enviar sua contribuiç�
 O sistema inclui testes automatizados usando JUnit para garantir a corretude e eficácia das funcionalidades implementadas. Os testes cobrem desde a validação de dados de entrada até a lógica de negócios das operações principais.
 
 ![tests](https://github.com/gabrielgrm/AirlineManagementSystem-POO/assets/131777675/6f56e5ca-b02b-4d8f-83b1-3c9a238ec160)
-
-## Contato
-
-Para mais informações, entre em contato com o administrador do repositório.
